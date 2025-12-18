@@ -1,0 +1,15 @@
+{% extends "invApp/layout.html" %}
+
+{% block content %}
+<h3>Product Details</h3>
+<p><strong>Name:</strong> {{ product.name }}</p>
+<p><strong>Price:</strong> ₹{{ product.price }}</p>
+
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Place Order</button>
+</form>
+{% endblock %}

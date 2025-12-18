@@ -1,0 +1,14 @@
+{% extends "invApp/layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="mx-auto max-w-screen border border-black-400 rounded-lg mt -10 p-10 bg-slate-200">
+    <h1>Login</h1>
+    <form action="." method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}
